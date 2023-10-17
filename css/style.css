@@ -24,12 +24,7 @@ body{
 
 /**Globales**/
 
-.container{
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
 
-}
 
 a{
     text-decoration: none;
@@ -60,6 +55,14 @@ img{
 }
 
 /*Utility first*/
+
+.container{
+    /* max-width: 120rem;
+    width: 90%; */
+    width: min(90%,120rem);
+    margin: 0 auto;
+
+}
 .no-margin{
     margin: 0;
 }
@@ -102,6 +105,17 @@ img{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 2rem 0;
+    }
+}
+
+.navegacion{
+    margin-top: 1rem;
+}
+
+@media (min-width:768px){
+    .navegacion{
+        margin-top: 0;
     }
 }
 
@@ -174,6 +188,7 @@ img{
 
     .widget-curso{
         border-bottom: 1px solid var(--gris);
+        margin-bottom: 2rem;
     }
 
     .widget-curso:last-of-type{
@@ -188,3 +203,76 @@ img{
     .widget-curso__info{
         font-weight: normal;
     }
+
+/*FOOTER*/
+
+.footer{
+    background-color: var(--negro);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/**NOSOTROS**/
+
+.nosotros-titulo{
+    text-align: center;
+}
+
+@media (min-width:768px){
+    .nosotros__contenido{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+}
+
+/*CURSOS*/
+@media (min-width:768px){
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+        padding: 3rem 0;
+    }
+}
+.curso{
+    
+    /* padding-bottom: 1rem; */
+    border-bottom: 1px solid var(--gris);
+}
+
+.curso:last-of-type{
+    border: none;
+    padding-bottom: 0;
+}
+
+/*CONTACTO*/
+
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: -5rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label{
+    flex: 0 0 9rem;
+}
+
+.campo__input{
+    flex: 1;
+}
