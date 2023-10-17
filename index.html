@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina web de preparacion de cafe">
+    <!-- PreFetch -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+    <!-- Normalize -->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
     <!-- FUENTES -->
@@ -37,7 +41,11 @@
             <h3>Nuestro Blog</h3>
 
             <article class="entrada">
-                <img class="entrada__imagen" src="img/blog1.jpg" alt="">
+                <picture>
+                    <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                    <img loading="lazy" class="entrada__imagen" src="img/blog1.jpg" alt="imagen-blog">
+                </picture>
+                
                 <div class="entrada__contenido">
                     <h4 class="no-margin entrada__titulo">Tipos de granos de Cafe</h4>
                     <p class="entrada__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat repudiandae nisi praesentium aspernatur ex voluptates amet soluta eaque. Dolores numquam nostrum quis commodi dolorem repudiandae magnam esse dicta quas laboriosam.</p>
@@ -45,7 +53,10 @@
                 </div>  
             </article> <!--FIN DE ARTICLE-->
             <article class="entrada">
-                <img class="entrada__imagen" src="img/blog2.jpg" alt="">
+                <picture>
+                    <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                    <img loading="lazy" class="entrada__imagen" src="img/blog2.jpg" alt="imagen-blog">
+                </picture>
                 <div class="entrada__contenido">
                     <h4 class="no-margin entrada__titulo">3 Deliciosas recetas de cafe</h4>
                     <p class="entrada__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat repudiandae nisi praesentium aspernatur ex voluptates amet soluta eaque. Dolores numquam nostrum quis commodi dolorem repudiandae magnam esse dicta quas laboriosam.</p>
@@ -53,7 +64,10 @@
                 </div>  
             </article> <!--FIN DE ARTICLE-->
             <article class="entrada">
-                <img class="entrada__imagen" src="img/blog1.jpg" alt="">
+                <picture>
+                    <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                    <img loading="lazy" class="entrada__imagen" src="img/blog3.jpg" alt="imagen-blog">
+                </picture>
                 <div class="entrada__contenido">
                     <h4 class="no-margin entrada__titulo">Beneficios Del Cafe</h4>
                     <p class="entrada__texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat repudiandae nisi praesentium aspernatur ex voluptates amet soluta eaque. Dolores numquam nostrum quis commodi dolorem repudiandae magnam esse dicta quas laboriosam.</p>
@@ -68,13 +82,13 @@
                     <h4 class="no-margin">Tecnicas De Extraccion De Cafe</h4>
                     <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
                     <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
-                    <a class="boton boton--secundario" href="#">Más información</a>
+                    <a class="boton boton--secundario" href="cursos.html">Más información sobre nuestros cursos</a>
                 </li>
                 <li class="widget-curso">
                     <h4 class="no-margin">4 Recetas De Cafe Para Principiantes</h4>
                     <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
                     <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
-                    <a class="boton boton--secundario" href="#">Más información</a>
+                    <a class="boton boton--secundario" href="cursos.html">Más información sobre nuestros cursos</a>
                 </li>
                 
             </ul>
@@ -92,5 +106,6 @@
             </nav>
         </div>
     </footer>
+    <script src="js/modernizr.js"></script>
 </body>
 </html>

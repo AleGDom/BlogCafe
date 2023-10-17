@@ -83,7 +83,12 @@ img{
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 2rem;
+    border: none;
     
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 .boton--secundario{
@@ -91,8 +96,14 @@ img{
 }
 
 /*Header*/
-
-.header{
+.webp .header{
+    background-image: url(../img/banner.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 60rem;
+}
+.no-webp .header{
     background-image: url(../img/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -248,7 +259,14 @@ img{
 
 /*CONTACTO*/
 
-.contacto-bg{
+.webp .contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.no-webp .contacto-bg{
     background-image: url(../img/contacto.jpg);
     height: 40rem;
     background-repeat: no-repeat;
@@ -260,19 +278,28 @@ img{
     background-color: var(--blanco);
     width: 95%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 4rem;
     margin-top: -5rem;
 }
 
 .campo{
     display: flex;
     margin-bottom: 2rem;
+    gap: 2rem;
 }
 
 .campo__label{
     flex: 0 0 9rem;
+    text-align: right;
 }
 
 .campo__input{
     flex: 1;
+    border: 1px solid var(--gris);
+    padding: 1rem;
 }
+
+.campo__input--textarea{
+    height: 20rem;
+}
+
